@@ -13,22 +13,6 @@ const PROJECTS = [
     img: "./src/assets/oportuna.jpg",
     link: "https://github.com/Santozs2/oportuna-conecta",
     type: "github" as const
-  },
-  {
-    title: "AURA STORE",
-    category: "E-COMMERCE",
-    year: "2025",
-    img: "https://images.unsplash.com/photo-1588333238932-00b5d607f7e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYmxhY2slMjB3ZWJzaXRlfGVufDF8fHx8MTc3MzA5NzI4MXww&ixlib=rb-4.1.0&q=80&w=1080",
-    link: "https://aurastore-demo.vercel.app",
-    type: "web" as const
-  },
-  {
-    title: "CHROMA",
-    category: "AGENCY SITE",
-    year: "2024",
-    img: "https://images.unsplash.com/photo-1676099748858-6d4c18fa7c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjAzZCUyMGdlb21ldHJpYyUyMHNoYXBlcyUyMGRhcmt8ZW58MXx8fHwxNzczMDk3Mjc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    link: "https://github.com/username/chroma-agency",
-    type: "github" as const
   }
 ];
 
