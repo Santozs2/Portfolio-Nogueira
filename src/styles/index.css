@@ -1,6 +1,6 @@
 @import './fonts.css';
-@import './tailwind.css';
 @import './theme.css';
+@import './tailwind.css';
 
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
@@ -12,12 +12,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6; /* Blue-500 */
+  background: #3b82f6;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb; /* Blue-600 */
+  background: #2563eb;
 }
 
 /* For Firefox */
@@ -26,7 +26,6 @@
   scrollbar-color: #3b82f6 transparent;
 }
 
-/* Modal specific scrollbar (if needed) */
 .overflow-y-auto {
   scrollbar-gutter: stable;
 }
