@@ -1,29 +1,74 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
-export const Cursor = () => {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
-  
-  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+export function CustomCursor() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { stiffness: 500, damping: 28, mass: 0.5 };
+  const cursorX = useSpring(mouseX, springConfig);
+  const cursorY = useSpring(mouseY, springConfig);
+
+  const outerSpringConfig = { stiffness: 250, damping: 20, mass: 0.2 };
+  const outerX = useSpring(mouseX, outerSpringConfig);
+  const outerY = useSpring(mouseY, outerSpringConfig);
+
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @media (min-width: 768px) {
+        * { cursor: none !important; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    const updateMousePosition = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+      
+      const target = e.target as HTMLElement;
+      if (target.closest('a') || target.closest('button') || target.closest('.cursor-hover')) {
+        setIsHovering(true);
+      } else {
+        setIsHovering(false);
+      }
     };
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
-  }, [cursorX, cursorY]);
+
+    window.addEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+      document.head.removeChild(style);
+    };
+  }, [mouseX, mouseY]);
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-8 h-8 rounded-full border border-zinc-300 mix-blend-difference pointer-events-none z-[100] flex items-center justify-center"
-      style={{ x: cursorXSpring, y: cursorYSpring }}
-    >
-      <div className="w-1 h-1 bg-white rounded-full" />
-    </motion.div>
+    <>
+      {/* Core Dot */}
+      <motion.div
+        className="fixed top-0 left-0 w-2 h-2 bg-blue-500 rounded-full pointer-events-none z-[9999] hidden md:block shadow-[0_0_10px_rgba(59,130,246,0.8)]"
+        style={{ 
+          x: cursorX, 
+          y: cursorY,
+          translateX: "-50%",
+          translateY: "-50%",
+          scale: isHovering ? 0 : 1
+        }}
+      />
+      {/* Outer Ring */}
+      <motion.div
+        className="fixed top-0 left-0 w-10 h-10 border border-blue-500/50 rounded-full pointer-events-none z-[9998] hidden md:flex items-center justify-center"
+        style={{ 
+          x: outerX, 
+          y: outerY,
+          translateX: "-50%",
+          translateY: "-50%",
+          scale: isHovering ? 1.5 : 1,
+          backgroundColor: isHovering ? "rgba(59, 130, 246, 0.1)" : "rgba(59, 130, 246, 0)",
+          borderColor: isHovering ? "rgba(59, 130, 246, 1)" : "rgba(59, 130, 246, 0.5)"
+        }}
+      />
+    </>
   );
-};
+}

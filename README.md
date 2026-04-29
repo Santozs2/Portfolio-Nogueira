@@ -60,7 +60,7 @@ Estou sempre aberto a novas oportunidades e colaborações.
 - **LinkedIn**: [Luis Antonio Nogueira](https://www.linkedin.com/in/luis-antonio-dos-santos-nogueira-52980634b)
 - **GitHub**: [@Santozs2](https://github.com/Santozs2)
 - **Instagram**: [@santoz.wdd](https://www.instagram.com/santoz.wdd/)
-- **WhatsApp**: [+55 11 99196-2290](https://wa.me/5511991962290)
+- **WhatsApp**: [+55 11 99196-2290](https://wa.me/5517991962290)
 - **E-mail**: [sn.luisantonio24@gmail.com](mailto:sn.luisantonio24@gmail.com)
 
 ---
