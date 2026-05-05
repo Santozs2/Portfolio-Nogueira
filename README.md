@@ -64,4 +64,5 @@ Estou sempre aberto a novas oportunidades e colaborações.
 - **E-mail**: [sn.luisantonio24@gmail.com](mailto:sn.luisantonio24@gmail.com)
 
 ---
-Desenvolvido com ❤️ por Luis Antonio Nogueira."# Portfolio-Nogueira" 
+Desenvolvido por Luis Antonio Nogueira."# Portfolio-Nogueira" 
+"# Portfolio-Nogueira" 
