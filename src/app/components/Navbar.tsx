@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { Link, useLocation } from "react-router-dom";
+
+interface NavbarLink {
+  name: string;
+  href: string;
+  isHash: boolean;
+}
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,28 +16,26 @@ export function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
 
-  const links = [
-    { name: "Início", href: "#inicio" },
-    { name: "Visão", href: "#sobre" },
-    { name: "Projetos", href: "#projetos" },
-    { name: "Contato", href: "#contato" },
+  const links: NavbarLink[] = [
+    { name: "Início", href: "/#inicio", isHash: true },
+    { name: "Visão", href: "/#sobre", isHash: true },
+    { name: "Projetos", href: "/#projetos", isHash: true },
+    { name: "Resumo", href: "/resume", isHash: false },
+    { name: "Contato", href: "/#contato", isHash: true },
   ];
+
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Show navbar when at top
       if (currentScrollY < 50) {
         setIsVisible(true);
-      } 
-      // Hide navbar when scrolling down
-      else if (currentScrollY > lastScrollY) {
+      } else if (currentScrollY > lastScrollY) {
         setIsVisible(false);
-      } 
-      // Show navbar when scrolling up
-      else {
+      } else {
         setIsVisible(true);
       }
       
@@ -47,6 +52,18 @@ export function Navbar() {
     else document.body.style.overflow = 'unset';
   }, [isOpen]);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isHash: boolean) => {
+    setIsOpen(false);
+    if (isHash && location.pathname === "/") {
+      e.preventDefault();
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
       <motion.nav 
@@ -55,12 +72,11 @@ export function Navbar() {
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4 bg-white/80 backdrop-blur-md border-b border-zinc-300 text-zinc-900 dark:bg-zinc-950/80 dark:border-zinc-800 dark:text-zinc-50" : "py-8 text-zinc-900 dark:text-zinc-50"}`}
       >
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
-          <a href="#inicio" className="text-xl md:text-2xl font-black uppercase tracking-tighter cursor-hover z-[60] relative flex items-center gap-2">
+          <Link to="/" onClick={(e) => handleLinkClick(e as any, "/#inicio", true)} className="text-xl md:text-2xl font-black uppercase tracking-tighter cursor-hover z-[60] relative flex items-center gap-2">
             NOGUEIRA
-          </a>
+          </Link>
 
           <div className="flex items-center gap-6 z-[60]">
-            {/* Theme Toggle Button */}
             <motion.button
               onClick={toggleTheme}
               className="relative w-12 h-12 rounded-full bg-white border-2 border-zinc-300 dark:bg-zinc-900 dark:border-zinc-800 flex items-center justify-center cursor-pointer hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
@@ -114,14 +130,14 @@ export function Navbar() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ delay: 0.2 + i * 0.1, duration: 0.5, ease: "easeOut" }}
                 >
-                  <a
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
+                  <Link
+                    to={link.href}
+                    onClick={(e) => handleLinkClick(e, link.href, link.isHash)}
                     className="text-5xl md:text-8xl font-black uppercase tracking-tighter hover:text-blue-500 transition-all duration-300 cursor-hover block text-zinc-900 dark:text-zinc-50 dark:hover:text-blue-500"
                     style={{ WebkitTextStroke: "1px rgba(0,0,0,0.05)" }}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -140,3 +156,4 @@ export function Navbar() {
     </>
   );
 }
+
