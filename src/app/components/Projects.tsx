@@ -11,9 +11,9 @@ import Image3 from "./../../assets/amorecacau2.jpg";
 import Image4 from "./../../assets/amorecacau3.jpg";
 import Image5 from "./../../assets/oportuna2.jpg";
 import Image6 from "./../../assets/oportuna3.jpg";
-import Image7 from "./../../assets/autopart.jpg";
-import Image8 from "./../../assets/autopart2.jpg";
-import Image9 from "./../../assets/autopart3.jpg";
+import Image7 from "./../../assets/icefrost.jpg";
+import Image8 from "./../../assets/icefrost2.jpg";
+import Image9 from "./../../assets/icefrost3.jpg";
 
 const projects: Project[] = [
   {
@@ -40,13 +40,13 @@ const projects: Project[] = [
   },
     {
     id: "03",
-    title: "AUTOPART",
-    client: "",
+    title: "ICEFROST",
+    client: "Gestor de sorveteria",
     image: Image7,
     images: [Image7, Image8, Image9],
-    description: "Gestor de uma distribuidora de autopeças, desenvolvido com Django e MySQL lite 3. O sistema inclui cadastro de clientes, fornecedores, etc. O projeto foi criado para uma avaliação formativa de Django do meu curso técnico.",
-    roles: ["Django", "MySQL"],
-    github: "https://github.com/Santozs2/autopart",
+    description: "Gestor de uma sorveteria desenvolvido com Django e MySql lite 3. O sistema inclui cadastro de sorvetes, fornecedores, etc. O projeto foi criado para uma avaliação formativa de Django do meu curso técnico.",
+    roles: ["Django", "MySQL", "HTML", "CSS"],
+    github: "https://github.com/Santozs2/icefrost",
     link: "",
   },
 ];
