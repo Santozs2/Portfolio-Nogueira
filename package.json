@@ -1,6 +1,7 @@
 {
   "name": "portfolio-nogueira",
   "private": true,
+  "homepage": "https://nogueiraweb.vercel.app",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
