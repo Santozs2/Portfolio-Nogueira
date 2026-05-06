@@ -9,11 +9,11 @@ export function Hero() {
 
   return (
     <section id="inicio" className="relative h-screen flex flex-col justify-center overflow-hidden bg-white border-b border-zinc-200 dark:bg-zinc-950 dark:border-zinc-900">
-      {/* Dark Industrial Grid Background */}
+      {/* Fundo de Grade Industrial Escura */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:32px_32px] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-zinc-950/50 dark:to-zinc-950" />
 
-      {/* Dynamic Background Text */}
+      {/* Texto de Fundo Dinâmico */}
       <motion.div 
         style={{ y: y2 }}
         className="absolute top-[15%] left-[-2%] text-[24vw] font-black text-zinc-100/50 leading-none tracking-tighter whitespace-nowrap z-0 select-none pointer-events-none dark:text-zinc-900/50 transform-gpu"
@@ -45,7 +45,7 @@ export function Hero() {
 
       </div>
 
-      {/* Marquee Tape */}
+      {/* Fita de Letreiro (Marquee) */}
       <div className="absolute bottom-8 left-0 w-full overflow-hidden border-y border-zinc-300 bg-white/80 py-3 z-20 dark:border-zinc-800 dark:bg-zinc-950/80">
         <motion.div 
           animate={{ x: ["0%", "-50%"] }} 

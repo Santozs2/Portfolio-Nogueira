@@ -111,7 +111,7 @@ export function Contact() {
         </div>
       </div>
 
-      {/* WhatsApp Popup */}
+      {/* Popup do WhatsApp */}
       <BaseModal
         isOpen={whatsappOpen}
         onClose={() => setWhatsappOpen(false)}

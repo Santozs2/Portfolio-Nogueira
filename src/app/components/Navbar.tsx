@@ -21,7 +21,7 @@ export function Navbar() {
   const links: NavbarLink[] = [
     { name: "Início", href: "/#inicio", isHash: true },
     { name: "Visão", href: "/#sobre", isHash: true },
-    { name: "Projetos", href: "/#projetos", isHash: true },
+    { name: "Projetos", href: "/projects", isHash: false },
     { name: "Resumo", href: "/resume", isHash: false },
     { name: "Contato", href: "/#contato", isHash: true },
   ];

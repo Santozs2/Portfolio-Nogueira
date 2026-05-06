@@ -51,7 +51,7 @@ export function ProjectModal({
     >
       {project && (
         <>
-          {/* Left Side: Image Carousel */}
+          {/* Lado Esquerdo: Carrossel de Imagens */}
           <div className="w-full md:w-1/2 h-64 sm:h-80 md:h-auto relative overflow-hidden p-2 md:p-6 bg-white dark:bg-zinc-950 group/carousel">
             <AnimatePresence mode="wait">
               <motion.div
@@ -70,7 +70,7 @@ export function ProjectModal({
               </motion.div>
             </AnimatePresence>
 
-            {/* Carousel Navigation */}
+            {/* Navegação do Carrossel */}
             <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
               <button 
                 onClick={(e) => { e.stopPropagation(); prevImage(); }}
@@ -89,7 +89,7 @@ export function ProjectModal({
               </button>
             </div>
 
-            {/* Indicators */}
+            {/* Indicadores */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 bg-black/20 backdrop-blur-sm p-2 rounded-full">
               {project.images.map((_, idx) => (
                 <button
@@ -105,7 +105,7 @@ export function ProjectModal({
             </div>
           </div>
 
-          {/* Right Side: Content */}
+          {/* Lado Direito: Conteúdo */}
           <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-start md:justify-center bg-white overflow-y-auto flex-1 min-h-0 dark:bg-zinc-900">
             
             <h3 

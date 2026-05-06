@@ -6,7 +6,17 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'scan-line': 'scan 3s linear infinite',
+      },
+      keyframes: {
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(400%)' },
+        }
+      }
+    },
   },
   plugins: [
     function({ addVariant }) {

@@ -7,6 +7,7 @@ import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { ResumePage } from './components/ResumePage';
+import { ProjectsPage } from './components/ProjectsPage';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Toaster } from 'sonner';
 
@@ -41,6 +42,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<ResumePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
           </Routes>
         </div>
       </Router>

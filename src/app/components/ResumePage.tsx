@@ -61,7 +61,7 @@ export function ResumePage() {
     <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 bg-white dark:bg-zinc-950 transition-colors duration-500 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         
-        {/* Page Header */}
+        {/* Cabeçalho da Página */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export function ResumePage() {
 
         <div className="flex flex-col lg:flex-row gap-20 xl:gap-32">
           
-          {/* Left Column: Sidebar with Skills */}
+          {/* Coluna Esquerda: Barra Lateral com Habilidades */}
           <aside className="lg:w-[38%] xl:w-[32%] order-2 lg:order-1">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -102,9 +102,9 @@ export function ResumePage() {
               transition={{ duration: 0.8 }}
               className="lg:sticky lg:top-32 h-fit"
             >
-              {/* Sidebar Box with unique group name to avoid interference with icon hover */}
+              {/* Box da Barra Lateral com nome de grupo único para evitar interferência com hover do ícone */}
               <div className="relative group/sidebar">
-                {/* Cyberpunk Glow */}
+                {/* Brilho Cyberpunk */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-none blur opacity-15 group-hover/sidebar:opacity-30 transition duration-1000 group-hover/sidebar:duration-200"></div>
                 
                 <div className="relative bg-zinc-950 border border-zinc-800 dark:border-cyan-500/20 p-8 md:p-12 shadow-2xl">
@@ -122,7 +122,7 @@ export function ResumePage() {
                         
                         <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 gap-5">
                           {data.items.map((skill) => (
-                            /* Each skill icon gets its own group scope */
+                            /* Cada ícone de habilidade recebe seu próprio escopo de grupo */
                             <motion.div 
                               key={skill.name}
                               whileHover={{ y: -5 }}
@@ -133,7 +133,7 @@ export function ResumePage() {
                                 alt={skill.name}
                                 className="w-8 h-8 md:w-10 md:h-10 grayscale group-hover/skill:grayscale-0 transition-all duration-500"
                               />
-                              {/* Custom Tooltip - Only on direct icon hover */}
+                              {/* Tooltip Personalizado - Apenas ao passar o mouse diretamente no ícone */}
                               <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover/skill:opacity-100 group-hover/skill:-top-12 transition-all duration-300 pointer-events-none z-20">
                                 <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400 bg-zinc-950 px-3 py-1.5 border border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.3)] whitespace-nowrap">
                                   {skill.name}
@@ -159,7 +159,7 @@ export function ResumePage() {
             </motion.div>
           </aside>
 
-          {/* Right Column */}
+          {/* Coluna Direita */}
           <main className="lg:w-[62%] xl:w-[68%] order-1 lg:order-2 space-y-32">
             <section className="space-y-12">
               <div className="flex items-center gap-6">
