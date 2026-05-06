@@ -232,7 +232,7 @@ export function ResumePage() {
                 <div className="flex flex-col justify-end gap-6 mt-22">
                   <div className="flex flex-wrap gap-8 ">
                     <a 
-                      href="https://linkedin.com" 
+                      href="https://www.linkedin.com/in/luis-antonio-dos-santos-nogueira-52980634b" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] font-black text-zinc-400 hover:text-blue-500 transition-colors"
@@ -241,7 +241,7 @@ export function ResumePage() {
                       LinkedIn
                     </a>
                     <a 
-                      href="https://github.com" 
+                      href="https://github.com/Santozs2" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="group flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] font-black text-zinc-400 hover:text-blue-500 transition-colors"

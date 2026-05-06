@@ -52,8 +52,8 @@ export function Hero() {
           transition={{ repeat: Infinity, ease: "linear", duration: 20 }} 
           className="flex whitespace-nowrap text-sm font-mono text-zinc-400 uppercase tracking-widest dark:text-zinc-500 transform-gpu"
         >
-          <span className="px-4 flex items-center gap-4">ARQUITETURA FRONTEND <span className="text-blue-500">///</span> WEBGL & CÓDIGO CRIATIVO <span className="text-blue-500">///</span> PERFORMANCE EXTREMA <span className="text-blue-500">///</span> ESTÉTICA MODERNA <span className="text-blue-500">///</span> </span>
-          <span className="px-4 flex items-center gap-4">ARQUITETURA FRONTEND <span className="text-blue-500">///</span> WEBGL & CÓDIGO CRIATIVO <span className="text-blue-500">///</span> PERFORMANCE EXTREMA <span className="text-blue-500">///</span> ESTÉTICA MODERNA <span className="text-blue-500">///</span> </span>
+          <span className="px-4 flex items-center gap-4">ARQUITETURA FRONTEND <span className="text-blue-500">///</span> WEBGL & CÓDIGO CRIATIVO <span className="text-blue-500">///</span> ESTÉTICA MODERNA <span className="text-blue-500">///</span> </span>
+          <span className="px-4 flex items-center gap-4">ARQUITETURA FRONTEND <span className="text-blue-500">///</span> WEBGL & CÓDIGO CRIATIVO <span className="text-blue-500">///</span> ESTÉTICA MODERNA <span className="text-blue-500">///</span> </span>
         </motion.div>
       </div>
     </section>
