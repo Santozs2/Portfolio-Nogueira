@@ -11,9 +11,9 @@ import Image3 from "./../../assets/amorecacau2.jpg";
 import Image4 from "./../../assets/amorecacau3.jpg";
 import Image5 from "./../../assets/oportuna2.jpg";
 import Image6 from "./../../assets/oportuna3.jpg";
-import Image7 from "./../../assets/icefrost.jpg";
-import Image8 from "./../../assets/icefrost2.jpg";
-import Image9 from "./../../assets/icefrost3.jpg";
+import Image7 from "./../../assets/icefrost.png";
+import Image8 from "./../../assets/icefrost2.png";
+import Image9 from "./../../assets/icefrost3.png";
 
 const projects: Project[] = [
   {
