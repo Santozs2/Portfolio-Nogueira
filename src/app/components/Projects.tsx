@@ -35,11 +35,11 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center group cursor-hover`}
+                className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center group cursor-hover cursor-pointer`}
                 onClick={() => handleOpenProject(project)}
               >
                 
-                <div className="w-full md:w-3/5 relative overflow-hidden bg-zinc-100 border border-zinc-300 p-2 md:p-4 dark:bg-zinc-900 dark:border-zinc-800 transform-gpu">
+                <div className=" w-full md:w-3/5 relative overflow-hidden bg-zinc-100 border border-zinc-300 p-2 md:p-4 dark:bg-zinc-900 dark:border-zinc-800 transform-gpu">
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-white dark:bg-zinc-950">
                     <img 
                       src={project.image} 

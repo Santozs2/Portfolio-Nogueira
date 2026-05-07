@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { CustomCursor } from './components/Cursor';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -35,9 +34,8 @@ export default function App() {
     <ThemeProvider>
       <Router>
         <ScrollToTop />
-        <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-blue-500 selection:text-zinc-950 sm:cursor-auto cursor-auto md:cursor-none dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-500">
+        <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-blue-500 selection:text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-500">
           <Toaster position="top-right" richColors />
-          <CustomCursor />
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />

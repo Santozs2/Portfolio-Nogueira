@@ -72,11 +72,11 @@ export function Navbar() {
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4 bg-white/80 backdrop-blur-md border-b border-zinc-300 text-zinc-900 dark:bg-zinc-950/80 dark:border-zinc-800 dark:text-zinc-50" : "py-8 text-zinc-900 dark:text-zinc-50"}`}
       >
         <div className="max-w-[90%] mx-auto flex justify-between items-center">
-          <Link to="/" onClick={(e) => handleLinkClick(e as any, "/#inicio", true)} className="text-xl md:text-2xl font-black uppercase tracking-tighter cursor-hover z-[60] relative flex items-center gap-2">
+          <Link to="/" onClick={(e) => handleLinkClick(e as any, "/#inicio", true)} className="text-xl md:text-2xl font-black uppercase tracking-tighter cursor-hover z-[60] relative flex items-center gap-2 cursor-pointer">
             NOGUEIRA
           </Link>
 
-          <div className="flex items-center gap-6 z-[60]">
+          <div className="flex items-center gap-6 z-[60] cursor-pointer">
             <motion.button
               onClick={toggleTheme}
               className="relative w-12 h-12 rounded-full bg-white border-2 border-zinc-300 dark:bg-zinc-900 dark:border-zinc-800 flex items-center justify-center cursor-pointer hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
@@ -98,7 +98,7 @@ export function Navbar() {
 
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="group flex items-center gap-3 cursor-hover z-[60] relative"
+              className="group flex items-center gap-3 cursor-hover z-[60] relative cursor-pointer"
               aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             >
               <span className="text-xs font-mono uppercase tracking-widest hidden md:block text-zinc-400 group-hover:text-blue-500 transition-colors dark:text-zinc-400">
