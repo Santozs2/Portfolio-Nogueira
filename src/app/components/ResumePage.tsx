@@ -170,7 +170,7 @@ export function ResumePage() {
               <div className="text-3xl md:text-5xl text-zinc-700 dark:text-zinc-200 leading-[1.1] font-light">
                 <p>
                   Sou um estudante em Desenvolvimento Web e estou em <span className="font-black italic text-zinc-950 dark:text-zinc-50">constante busca de oportunidades</span> para crescer profissionalmente.
-                  Tenho experiencia com html, css, javascript, react, nodejs, mysql e git.
+                  Tenho experiencia com python, django, javascript, react, nodejs, mysql e git.
                 </p>
               </div>
             </section>
